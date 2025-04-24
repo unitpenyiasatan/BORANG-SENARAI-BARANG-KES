@@ -119,10 +119,12 @@
     e.preventDefault();
 
     const form = new FormData(this);
-    fetch("https://script.google.com/macros/s/AKfycbwyRBJI16k9fmsqfSnn0GMmlWU2xA1HbbxcPtB3dZsIAnOSFWbdRBjymmkeh_LloLhXMA/exec", {
-      method: "POST",
-      body: form
-    })
+    fetch("https://script.google.com/macros/s/AKfycbzK5gdMghcWwBdU6UfjXKwENImryn6FCIjPkwDNElkSukllzx3avv23CtRTZ0mJ52UBag/exec", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify(data)
+});
+
     .then(response => response.text())
     .then(result => {
       alert("✅ Berjaya dihantar!");
