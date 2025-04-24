@@ -16,6 +16,7 @@
       margin: auto;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      position: relative;
     }
     h2 {
       text-align: center;
@@ -46,8 +47,12 @@
     table th {
       background-color: #e1ecf7;
     }
+    .btn-kanan {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+    }
     button {
-      margin-top: 30px;
       padding: 10px 15px;
       background-color: #0078d4;
       color: #fff;
@@ -63,6 +68,12 @@
 <body>
 <div class="container">
   <h2>Borang Maklumat Barang Kes</h2>
+  
+  <!-- Butang Hantar di penjuru kanan atas -->
+  <div class="btn-kanan">
+    <button type="submit" form="barangForm">Hantar</button>
+  </div>
+
   <form id="barangForm">
     <label for="no_ip">No IP/Fail</label>
     <input type="text" id="no_ip" name="no_ip">
@@ -95,11 +106,6 @@
         <!-- JavaScript akan masukkan 27 baris -->
       </tbody>
     </table>
-
-   <div style="text-align: right; margin-bottom: 10px;">
-  <button type="submit">Hantar</button>
-</div>
-
   </form>
 </div>
 
